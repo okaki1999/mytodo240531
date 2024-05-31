@@ -1,2 +1,7 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>投稿詳細</h1>
+<%= @post.content %>
+<%= @post.created_at %>
+<%= button_to("投稿編集","/posts/#{@post.id}/edit",{method: "get"})%>
+<%= button_to("削除","/posts/#{@post.id}/destroy",{method: "post"})%>
+
+
