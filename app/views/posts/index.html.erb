@@ -1,8 +1,9 @@
 <h1>投稿一覧</h1>
-
+<div>
 <% @posts.each do |post| %>
 <p>____________________________</p>
 <%= link_to("#{post.content}","/posts/#{post.id}")%>
 <p>____________________________</p>
 <% end %>
+</div>
 
