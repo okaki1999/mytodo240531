@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mytodo240531</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= link_to("ホーム",'/') %>
-    <%= link_to("投稿一覧",'/posts/index') %>
-    <%= link_to("新規投稿",'/posts/new') %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+    <div class="d-flex" role="search">
+      <title>Mytodo240531</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= link_to("ホーム", '/', class: "btn btn-primary") %>
+      <%= link_to("投稿一覧", '/posts/index', class: "btn btn-primary") %>
+      <%= link_to("新規投稿", '/posts/new', class: "btn btn-primary") %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= javascript_importmap_tags %>
+      </div>
+    </nav>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
